@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta property="og:image" content="images/fb-share.png">
+  <meta name="author" content="Univesp">
+
+  <meta name="description" property="og:description" content="">
+
+  <title>Univesp | Enade 2024</title>
+
+  <link rel="shortcut icon" href="http://apps.univesp.br/common/favicon.ico" type="image/x-icon" />
+
+  <!-- Arquivos Bootstrap 4.5.3 -->
+  <!-- CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+    integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+  <!-- jQuery and JS bundle w/ Popper.js -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous">
+  </script>
+
+  <!-- Ícones por Font Awesome -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"
+    integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+  <!-- Ícones por Material Icons -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+  <!-- Tipografia institucional por Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet">
+
+  <!-- Compartilhamento por jsSocials -->
+  <link type="text/css" rel="stylesheet" href="https://cdn.jsdelivr.net/jquery.jssocials/1.4.0/jssocials.css" />
+  <link type="text/css" rel="stylesheet"
+    href="https://cdn.jsdelivr.net/jquery.jssocials/1.4.0/jssocials-theme-minima.css" />
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="https://apps.univesp.br/brinquedoteca/_common/stylesheets/brinquedoteca_geral_1.0.css">
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="./style/style.css">
+  <!-- <link rel="stylesheet" href="TemplateData/style.css"> -->
+
+ 
+
+</head>
+
+<body class="d-flex flex-column">
+
+  <!-- Menu -->
+ 
+
+  <!-- Conteúdo -->
+  <main id="conteudoPrincipal">
+    <div class="container webgl-content">
+      <div class="brinquedoteca" style="padding-top: 5%; padding-left: 0%;">
+        <a href="https://univesp.br/" target="_blank" target="_self">
+          <img src="https://apps.univesp.br/common/colorida-positiva.svg" width="200" height="auto" />
+        </a>
+      </div>
+      <div class="gameFrame">
+        <div id="gameContainer"
+          style="padding: 0px; margin: 0px; border: 0px; position: relative; overflow: hidden;">
+          <canvas id="unity-canvas" style="width: 100%;height: 100%;"></canvas>
+
+          <div id="unity-loading-bar">
+            <div class="logounivesp"></div>
+            <div class="logo Dark"></div>
+            <div class="progresso Dark">
+              <div id="unity-progress-bar-empty" class="empty">
+                <div id="unity-progress-bar-full" class="full"></div>
+            </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="game-footer">
+        <div class="telacheia" id="unity-fullscreen-button">
+          <i class="material-icons">
+            fullscreen
+          </i>
+        </div>
+      </div>
+    </div>
+
+  </main>
+
+  <div class="fundo">
+    <div class='moldura'></div>
+    <div class='container'></div>
+    <div class='moldura'></div>
+  </div>
+
+
+  <!-- Rodapé -->
+  <footer>
+    <div class="container d-flex justify-content-between align-items-center">
+
+      <div class="cred-rea">
+        <!-- Comente em caso de adaptação do REA -->
+        <div>
+          Recurso Educacional Aberto (REA) desenvolvido pela <a href="https://univesp.br/" target="blank">Univesp</a>,
+          disponível sob licença <a href="http://apps.univesp.br/common/license_MIT_2020.txt" target="_blank">MIT</a>.
+          <br class="d-none d-md-block" />Você pode utilizá-lo, compartilhá-lo e modificá-lo.
+        </div>
+        <div>
+          <!-- <a href="%UNITY_CUSTOM_URL_GITHUB%" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i> GitHub</a> -->
+          <button class="btn btn-link" data-toggle="modal" data-target="#creditos">Créditos</button>
+          <span><a href="https://github.com/univesp/jogo-enade-2024" target="_blank" aria-label="GitHub">| GitHub <i class="fab fa-github"></i></a></span>
+        </div>
+
+        <!-- Descomente em caso de adaptação do REA -->
+        <!-- <p>
+           <span>Recurso Educacional Aberto (REA) adaptado por SEU NOME.</span>
+           <span><a href="#">Versão original da Univesp</a></span>
+         </p> -->
+      </div>
+
+    </div>
+  </footer>
+  <!-- Fim do rodapé -->
+
+  <!-- Créditos -->
+
+  <div class="modal fade" id="creditos" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+    aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-body">
+
+
+          <h6>Governo do Estado de São Paulo</h6>
+          <p>Secretaria de Desenvolvimento Econômico</p>
+
+          <h6>UNIVERSIDADE VIRTUAL DO ESTADO DE SÃO PAULO – UNIVESP</h6>
+          <p><span class="funcao">Presidente</span>Marcos Augusto Borges</p>
+          <p><span class="funcao">Diretora Acadêmica</span>Lubienska Cristina Jaquiê Ribeiro</p>
+
+          <h6>Equipe</h6>
+          <!--<p><span class="funcao">Docente responsável</span>%UNITY_CUSTOM_CREDITOS_DOCENTE%</p>-->
+          <p><span class="funcao">Coordenação</span>Wesley de Souza Lima</p>
+          <p><span class="funcao">Roteirização e Design Instrucional</span>Thais Caldas Paiva Moreira e Henrique Inhauser Caldas</p>
+          <p><span class="funcao">Arte e Interfaces</span>Henrique Inhauser Caldas, Rony Melo Dantas e Francesco Micieli</p>
+          <p><span class="funcao">Programação</span>Roberto Cândido</p>
+        </div>
+        <div class="modal-footer">
+          <!--<p>%UNITY_CUSTOM_CREDITOS_DATA%</p>-->
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    var container = document.querySelector("#gameContainer");
+    var canvas = document.querySelector("#unity-canvas");
+    var loadingBar = document.querySelector("#unity-loading-bar");
+    var progressBarFull = document.querySelector("#unity-progress-bar-full");
+    var fullscreenButton = document.querySelector("#unity-fullscreen-button");    
+
+    var buildUrl = "Build";
+      var loaderUrl = buildUrl + "/enade.loader.js";
+      var config = {
+        dataUrl: buildUrl + "/enade.data.unityweb",
+        frameworkUrl: buildUrl + "/enade.framework.js.unityweb",
+        codeUrl: buildUrl + "/enade.wasm.unityweb",
+        streamingAssetsUrl: "StreamingAssets",
+        companyName: "DefaultCompany",
+        productName: "Enade",
+        productVersion: "1.0",
+        //showBanner: unityShowBanner,
+      };
+
+    loadingBar.style.display = "block";
+
+    var script = document.createElement("script");
+    script.src = loaderUrl;
+    script.onload = () => {
+      createUnityInstance(canvas, config, (progress) => {
+        progressBarFull.style.width = 100 * progress + "%";
+      }).then((unityInstance) => {
+        loadingBar.style.display = "none";
+        fullscreenButton.onclick = () => {
+          unityInstance.SetFullscreen(1);
+        };
+      }).catch((message) => {
+        alert(message);
+      });
+    };
+    document.body.appendChild(script);
+  </script>
+  <script type="text/javascript" src="javascript/events.js"></script>
+</body>
+
+</html>

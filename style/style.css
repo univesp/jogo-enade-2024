@@ -1,0 +1,275 @@
+body {
+  /* background-color: #7EEFD4;
+  background-color: #53EAC6;
+  background-color: #45E8C2;
+  background-color: #2EE5BA; */
+  background-color: #5be0c6;
+  position: relative;
+}
+
+main {
+  margin: -65px 0 0;
+  padding-top: 0;
+  display: flex;
+  align-items: center;
+}
+.container {
+  /* padding: 0; */
+}
+@media only screen and (max-width: 575.98px) {
+  nav > .container, nav > .container-fluid {
+    padding: 0 15px;
+  }
+}
+
+.fundo {
+  display: flex;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+}
+
+
+#gameContainer {
+  line-height: 0;
+  padding-bottom: 56.25%!important;
+  background-color: #FCF3E9!important;
+}
+
+.gameFrame {
+  border: 10px solid #fff!important;
+}
+@media (max-width: 575.98px) {
+  .gameFrame {
+    border: 7px solid #fff!important;
+  }
+}
+.brinquedoteca {
+  text-align: center;
+}
+.brinquedoteca a {
+  display: inline-block;
+  padding: 2% 4% .5%!important;
+  margin: auto;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  position: relative;
+  bottom: -2px;
+}
+.brinquedoteca img {
+  width: 250px;
+  max-width: 50vw;
+  margin-left: 1%;
+}
+@media (max-width: 991.98px) {
+  .brinquedoteca a {
+    padding: 4.5% 6% .5%!important;
+  }
+  .brinquedoteca img {
+    margin-left: 2%;
+  }
+}
+
+canvas {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.webgl-content .game-footer {
+  display: flex;
+  padding-top: 10px;
+  justify-content: flex-end;
+}
+
+/* Botao de fullscreen */
+.webgl-content .telacheia {
+  height: 42px;
+  width: 42px;
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.telacheia>i {
+  cursor: pointer;
+  font-size: 36px;
+  color: #000;
+  transition: .2s;
+}
+.telacheia:hover i {
+  /* transform: scale(1.1); */
+}
+
+/* Estilos load screen */
+.webgl-content * {border: 0; margin: 0; padding: 0}
+.webgl-content .logo,
+.webgl-content .logounivesp,
+.progresso {
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translatex(-50%);
+  transform: translatex(-50%);
+  background-color: #f9b9b9;
+}
+.webgl-content .logo {
+  background: url('https://apps.univesp.br/brinquedoteca/_common/assets/carregando.png') no-repeat center / contain;
+  /* background: url('https://apps.univesp.br/brinquedoteca/_common/assets/brinquedoteca-logo.svg') no-repeat center / contain; */
+  width: 25%;
+  height: 14%;
+  top: 30%;
+}
+.webgl-content .progresso {
+  width: 50%;
+  height: 3.5%;
+  top: 30%;
+  margin-top: 12%;
+}
+.webgl-content .progresso .empty {background: url('https://apps.univesp.br/brinquedoteca/_common/assets/progresso-empty.svg') no-repeat right / cover; float: right; width: 100%; height: 100%; display: inline-block;}
+.webgl-content .progresso .full {background: url('https://apps.univesp.br/brinquedoteca/_common/assets/progresso-full.svg') no-repeat left / cover; float: left; width: 0%; height: 100%; display: inline-block;}
+
+.webgl-content .logounivesp {
+  background: url('https://apps.univesp.br/common/colorida-positiva.svg') no-repeat center / contain;
+  width: 23%;
+  height: 25%;
+  bottom: 0;
+}
+
+@media (max-width: 767.98px) {
+  .webgl-content .logo {
+    width: 40%;
+    height: 18%;
+    top: 25%;
+  }
+  .webgl-content .progresso {
+    height: 4.5%;
+    width: 60%;
+    top: 25%;
+    margin-top: 15%;
+  }
+  .webgl-content .logounivesp {
+    width: 50%;
+    height: 33%;
+    bottom: 0;
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1440px) {
+  .container {
+    max-width: 960px;
+  }
+}
+
+
+/* HEADER FOOTER */
+/* Overrides do brinquedoteca_geral_1.0.css */
+nav {
+  z-index: auto;
+}
+
+nav .logo {
+}
+nav > .container {
+}
+
+/* BotÃĢo Pular para ConteÃšdo Principal */
+nav .logo .pularNavegacao {
+
+}
+
+/* Caixa do Logotipo */
+nav .logo img {
+  width: 140px;
+  margin-top: 10px;
+  filter: drop-shadow(0 0 40px #226453) drop-shadow(0 0 40px #50aa92);
+}
+
+/* BotÃĩes do Navbar */
+nav .nav-link {
+  margin-top: 25px;
+  height: 42px;
+  width: 42px;
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: black;
+}
+nav .nav-link i {
+  transition: .2s;
+}
+
+nav .nav-link:focus,
+nav .nav-link:hover,
+nav .nav-link[aria-expanded="true"] {
+  background-color: white;
+  color: black;
+}
+nav .nav-link:focus i,
+nav .nav-link:hover i,
+nav .nav-link[aria-expanded="true"] i {
+  /* transform: scale(1.1); */
+}
+
+@media (max-width: 767.98px) {
+  main {
+    margin: 0;
+  }
+  nav .logo img {
+    margin-top: 0;
+  }
+  nav .nav-link {
+    margin-top: 15px;
+  }
+}
+
+/* RodapÃĐ */
+footer {
+  padding-bottom: 1rem;
+}
+
+footer .btn {
+  white-space: nowrap;
+}
+
+footer > .container {
+  padding: 15px;
+}
+
+footer .cred-rea {
+  margin: 0;
+  padding-top: 15px;
+  border-top: 1px solid #354551;
+  flex-grow: 1;
+  display: flex;
+  justify-content: inherit;
+  flex-wrap: wrap;
+}
+
+footer .cred-rea > div:not(:first-child) {
+  border-left: none;
+}
+
+footer .cred-rea > div:not(:first-child) button {
+  border-left: 1px solid #354551;
+  padding-left: .5em;
+  margin-left: .5em;
+  vertical-align: baseline;
+}
+
+footer, footer .aval-rea .btn-secondary {
+  background-color: transparent;
+  color: #354551;
+  /* text-align: center; */
+}
+
+
+@media only screen and (min-width: 992px) and (max-width: 1440px) {
+  nav .logo {
+    width: 150px;
+  }
+}
